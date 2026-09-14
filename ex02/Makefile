@@ -1,6 +1,6 @@
-NAME = Span
+NAME = MutantStack
 
-SRCS = main.cpp MutantStack.cpp
+SRCS = main.cpp
 OBJS = $(SRCS:.cpp=.o)
 
 CXX = c++
@@ -11,7 +11,7 @@ all: $(NAME)
 $(NAME): $(OBJS)
 	$(CXX) $(CXXFLAGS) $(OBJS) -o $(NAME)
 
-%.o: %.cpp Span.hpp
+%.o: %.cpp MutantStack.hpp MutantStack.tpp
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 clean:
