@@ -95,7 +95,7 @@ int main()
 			mstack.push(*it);
 
 		std::vector<int> fromStack(mstack.begin(), mstack.end());
-		std::cout << std::boolalpha << "same content as src: " << (fromStack == src) << std::endl;
+		std::cout << "same content as src: " << (fromStack == src) << std::endl;
 	}
 
 	std::cout << BOLDWHITE << std::endl << "---------- MutantStack<int, std::vector<int>> (container au choix) ----------" << DEFAULT << std::endl;
@@ -158,9 +158,9 @@ int main()
 	std::cout << BOLDWHITE << std::endl << "---------- stack encore utilisable normalement (empty/top) ----------" << DEFAULT << std::endl;
 	{
 		MutantStack<int> mstack;
-		std::cout << std::boolalpha << "is empty: " << mstack.empty() << std::endl;
+		std::cout << "is empty: " << mstack.empty() << std::endl;
 		mstack.push(42);
-		std::cout << std::boolalpha << "is empty: " << mstack.empty() << std::endl;
+		std::cout << "is empty: " << mstack.empty() << std::endl;
 		std::cout << "top: " << mstack.top() << std::endl;
 	}
 
